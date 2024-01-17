@@ -4,7 +4,7 @@ numeral = 0
 if 'IV' in end_user:
     numeral += 4
 elif 'VI' in end_user:
-    numeral +=6
+    numeral +=6 #'asd'
 
     '''if i == 'V':
         numeral += 5
