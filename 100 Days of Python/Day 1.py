@@ -30,3 +30,5 @@ while '-' in word and lives > 0:
     
     if '-' not in word:
         print("\nYou win")
+
+print('testing')
