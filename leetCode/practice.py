@@ -1,3 +1,2 @@
-a = 'sagar'
-for i in range(len(a)):
-    print(a[:i])
+a = [""]
+print(len(a))
