@@ -1,4 +1,3 @@
-symbols = ['I', 'V', 'X', 'L', 'C', 'D', 'M']
 end_user = input("Enter the roman numbers")
 numeral = 0
 for i in end_user:
