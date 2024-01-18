@@ -1,3 +1,3 @@
 a = 'sagar'
-if 'ag' in a:
-    print('yes')
+if 'as' in a:
+    print('ok')
