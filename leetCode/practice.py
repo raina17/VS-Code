@@ -1,3 +1,3 @@
 a = 'sagar'
-if 'as' in a:
-    print('ok')
+for i in range(len(a)):
+    print(a[:i])
