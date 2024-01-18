@@ -1,21 +1,25 @@
-symbols_and_values = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+symbols = ['I', 'V', 'X', 'L', 'C', 'D', 'M']
 end_user = input("Enter the roman numbers")
 numeral = 0
-if 'IV' in end_user:
-    numeral += 4
-elif 'VI' in end_user:
-    numeral +=6 #'asd'
-
-    '''if i == 'V':
+for i in end_user:
+    if i == 'I':
+        if end_user.index(i) < end_user.index('V'):
+            numeral -= 1
+        else:
+            numeral +=1
+    elif i == 'V':
         numeral += 5
-    if i == 'X':
-        numeral += 10
-    if i == 'L':
+    elif i == 'X':
+        if end_user.index(i) > end_user.index('I'):
+            numeral += 9
+        else:
+            numeral +=10
+    elif i == 'L':
         numeral += 50
-    if i == 'C':
+    elif i == 'C':
         numeral += 100
-    if i == 'D':
+    elif i == 'D':
         numeral += 500
-    if i == 'M':
-        numeral += 1000'''
+    elif i == 'M':
+        numeral += 1000
 print(numeral)
