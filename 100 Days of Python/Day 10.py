@@ -17,6 +17,8 @@ while continued == 'y':
     elif operation == '*':
         final = first_number*second_number
         print(final)
-    continued = input(f"Type 'y' to contnue with {final} or type 'n' to start a new calculation")
-    if continued == 'y':
+    to_continued = input(f"Type 'y' to contnue with {final} or type 'n' to start a new calculation")
+    if to_continued == 'y':
         first_number = final
+    if to_continued == 'n':
+        first_number = first_number = int(input("What is the first number?"))
