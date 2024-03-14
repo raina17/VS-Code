@@ -1,4 +1,4 @@
-from keys import Key, Secret
+from testkeys import Key, Secret, Base_url  
 from binance.um_futures import UMFutures
 import ta
 import pandas as pd
@@ -12,7 +12,8 @@ leverage = 20
 type = 'ISOLATED'
 qty = 100
 
-client = UMFutures(key=Key, secret=Secret)
+client = UMFutures(key= Key, secret= Secret, base_url = Base_url )
+
 
 def get_balance_usdt():
     try:
