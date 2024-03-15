@@ -31,12 +31,9 @@ def get_tickers_usdt():
 def get_klines_data(symbol, column='Close'):
     try:
         resp = pd.DataFrame(client.klines(symbol, '1m'))
-        resp = resp.iloc[:,:6]
+        resp = resp.iloc[400:,:6]
         resp.columns = ['Time', 'Open', 'High', 'Low', 'Close', 'Volume']
         resp['Time'] = pd.to_datetime(resp['Time'], unit='ms')
-        
-        today = datetime.datetime.now().date()
-        resp = resp[resp['Time'].dt.date == today]
 
         first_value = float(resp[column].iloc[0])
         last_value = float(resp[column].iloc[-1])
