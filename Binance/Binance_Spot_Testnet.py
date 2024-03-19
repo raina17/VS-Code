@@ -1,6 +1,6 @@
 from binance.spot import Spot
 from Binance_Spot_Coins_List import coin_list
-from keys import Key, Secret
+from spot_test_keys import Key, Secret
 from binance.error import ClientError
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
@@ -11,7 +11,9 @@ time_duration = '15m'
 
 # Initialize Binance client
 client = Spot(api_key=Key, api_secret=Secret)
-
+client.base_url = "https://testnet.binance.vision/api"
+balance = client.balance()
+print(balance)
 def get_klines_data(symbol, column='Close'):
     """
     Get historical price data for a symbol.
