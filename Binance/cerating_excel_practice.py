@@ -11,15 +11,19 @@ balance = client.balance()[0]['balance']
 print(f'My BTC balance is {balance}')
 
 #to get the current holding I have
-current_assets = [symbol['asset'] for symbol in client.user_asset() if symbol['free'] != '0' or symbol['locked'] != '0']
-print(f'My current holdings are {current_assets}')
+#current_assets = [symbol['asset'] for symbol in client.user_asset() if symbol['free'] != '0' or symbol['locked'] != '0']
+#print(f'My current holdings are {current_assets}')
+# current_holdings = {}
+# for symbol in client.user_asset():
+#     if (symbol['free']) > (symbol['locked']):
+#         current_holdings[symbol['asset']] = (symbol['free'])
+#     else:
+#         current_holdings[symbol['asset']] = (symbol['locked'])
+# print(current_holdings)
 
-# Global variable for time duration
-time_duration = '5m'
+# for symbol in current_holdings:
+#     print(symbol)
+#     print(float(client.ticker_price(symbol + "USDT")["price"])*.95)
 
-
-response0 = client.get_open_orders("REQUSDT")
-print(response0)
-response1 = client.cancel_open_orders("REQUSDT")
-print(response1)
-print(response0)
+#a = client.new_order(symbol=, side=, )
+print(client.depth('API3USDT'))

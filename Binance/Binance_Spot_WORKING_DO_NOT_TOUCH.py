@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 import ta
 
 # Global variable for time duration
-time_duration = '15m'
+time_duration = '5m'
 
 # Initialize Binance client
 client = Spot(api_key=Key, api_secret=Secret)
